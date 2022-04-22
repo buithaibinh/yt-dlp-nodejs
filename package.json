@@ -25,10 +25,10 @@
   "dependencies": {
     "dargs": "~8.1.0",
     "execa": "~6.1.0",
-    "is-unix": "~2.0.6"
+    "is-unix": "~2.0.6",
+    "node-fetch": "~2.6.5"
   },
   "devDependencies": {
-    "node-fetch": "~2.6.5",
     "mkdirp": "~1.0.4",
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
