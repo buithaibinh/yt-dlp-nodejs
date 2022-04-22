@@ -1,9 +1,8 @@
 'use strict'
 
-import fetch from 'node-fetch'
-
-import { promises as fs } from 'fs'
-import mkdirp from 'mkdirp'
+const fetch = require('node-fetch')
+const fs = require('fs').promises
+const mkdirp = require('mkdirp')
 
 const BINARY_CONTENT_TYPES = [
   'binary/octet-stream',
@@ -11,7 +10,13 @@ const BINARY_CONTENT_TYPES = [
   'application/x-binary'
 ]
 
-import { YOUTUBE_DL_PATH, YOUTUBE_DL_HOST, YOUTUBE_DL_DIR, YOUTUBE_DL_FILE, YOUTUBE_DL_SKIP_DOWNLOAD } from '../src/constants.js'
+const {
+  YOUTUBE_DL_PATH,
+  YOUTUBE_DL_HOST,
+  YOUTUBE_DL_DIR,
+  YOUTUBE_DL_FILE,
+  YOUTUBE_DL_SKIP_DOWNLOAD
+} = require('../src/constants')
 
 const getBinary = async url => {
   const response = await fetch(url)
